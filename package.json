@@ -1,5 +1,5 @@
 {
-  "name": "bs4starter",
+  "name": "greenfreshnbakes",
   "version": "1.0.0",
   "description": "Bootstrap 4 workflow",
   "main": "index.js",
@@ -16,5 +16,13 @@
     "browser-sync": "^2.23.6",
     "gulp": "^3.9.1",
     "gulp-sass": "^3.1.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devsaheer/GFCakes.git"
+  },
+  "bugs": {
+    "url": "https://github.com/devsaheer/GFCakes/issues"
+  },
+  "homepage": "https://github.com/devsaheer/GFCakes#readme"
 }
