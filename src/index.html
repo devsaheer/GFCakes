@@ -1,207 +1,399 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/fontawesome.min.css"> -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
 
 
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Bootstrap 4 Starter</title>
     <style type="text/css">
-    
+
     </style>
 </head>
+
 <body>
-    
-        <div class="row no-gutters">
-          <div class="col-md-2 bg-inverse">
-              <div class="text-center my-5">
-              <img class="img-fluid" src="img/green.png" height="100" width="100" alt="Green Mart Logo">
+
+    <div class="row no-gutters">
+        <div class="col-md-2 bg-inverse">
+            <div class="text-center my-5">
+                <img class="img-fluid" src="img/green.png" height="100" width="100" alt="Green Mart Logo">
             </div>
-              <ul class="nav mt-4 flex-column nav-pills">
-                  <li class="nav-item"><a href="index.html" class="nav-link active p-3"><i class="fas fa-tachometer-alt mr-3"></i>Dashboard</a></li>
-              
-                  <li class="nav-item"><a href="index.html" class="nav-link p-3"><i class="fas fa-sync mr-3"></i>Orders</a></li>
+            <ul class="nav mt-4 flex-column nav-pills">
+                <li class="nav-item"><a href="index.html" class="nav-link active p-3"><i class="fas fa-tachometer-alt mr-3"></i>Dashboard</a></li>
 
-                  <li class="nav-item"><a href="products.html" class="nav-link p-3"><i class="fas fa-birthday-cake mr-3"></i>Products</a></li>
+                <li class="nav-item"><a href="index.html" class="nav-link p-3"><i class="fas fa-sync mr-3"></i>Orders</a></li>
 
-                  <li class="nav-item"><a href="categories.html"  class="nav-link p-3"><i class="fas fa-folder-open mr-3"></i>Categories</a></li>
+                <li class="nav-item"><a href="products.html" class="nav-link p-3"><i class="fas fa-birthday-cake mr-3"></i>Products</a></li>
 
-                  <li class="nav-item"><a href="users.html" class="nav-link p-3"><i class="fas fa-users mr-3"></i>Users</a></li>
-              </ul>
+                <li class="nav-item"><a href="categories.html" class="nav-link p-3"><i class="fas fa-folder-open mr-3"></i>Categories</a></li>
 
-          </div>
-          <div class="col-md-10">
-           <nav class="navbar navbar-light bg-faded navbar-toggleable-md mb-2">
-               <div class="container">
-                   <div class="navbar-toggler navbar-toggler-right" data-toggle="collapse" data-target="#navbarNav"><span class="navbar-toggler-icon"></span></div>
-                   <div class="collapse navbar-collapse" id="navbarNav">
-                      <form class="form-inline mr-auto">
-                          <input type="text" class="form-control" placeholder="Search...">
-                          <button class="btn btn-outline-success" type="button">Search</button>
-                      </form>
-                      <ul class="navbar-nav">
-                          <li class="nav-item mr-4"><a href="" class="nav-link"><i class="fas fa-lg fas-lg fa-bell"></i></a></li>
-                          <li class="nav-item mr-4"><a href="" class="nav-link"><i class="fas fa-lg fa-sign-out-alt"></i></a></li>
-                          
+                <li class="nav-item"><a href="users.html" class="nav-link p-3"><i class="fas fa-users mr-3"></i>Users</a></li>
+            </ul>
 
-                      </ul>
-                   </div>
-               </div>
-               
-           </nav>
+        </div>
+        <div class="col-md-10">
+            <nav class="navbar navbar-light bg-faded navbar-toggleable-md mb-2">
+                <div class="container">
+                    <div class="navbar-toggler navbar-toggler-right" data-toggle="collapse" data-target="#navbarNav"><span
+                            class="navbar-toggler-icon"></span></div>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <form class="form-inline mr-auto">
+                            <input type="text" class="form-control" placeholder="Search...">
+                            <button class="btn btn-outline-success" type="button">Search</button>
+                        </form>
+                        <ul class="navbar-nav">
+                            <li class="nav-item mr-4"><a href="" class="nav-link"><i class="fas fa-lg fas-lg fa-bell"></i></a></li>
+                            <li class="nav-item mr-4"><a href="" class="nav-link"><i class="fas fa-lg fa-sign-out-alt"></i></a></li>
 
-           <header id="main-header" class="bg-primary py-2 text-white">
-               <div class="container">
-                   <div class="row">
-                        <div class="col-md-6">
-                                <h1><i class="fas fa-binoculars"></i> Overview</h1>
-            
-                           </div>
-                   </div>
-               </div>
-           </header>
 
-           <!-- ACTIONS  -->
-           <div class="bg-faded-1">
-               <section id="actions" class="pt-5">
-                <div class="container">   
-                <div class="row">
-                   
-               
-                   <div class="col-md-4">
-                      <button class="btn btn-success btn-block" type="button"><i class="fas fa-plus"></i> Add Product</button>
-                   </div>
-               
-                   <div class="col-md-4">
-                        <button class="btn btn-warning btn-block" type="button"><i class="fas fa-plus"></i> Add Category</button>
-                   </div>
-               
-                   <div class="col-md-4">
-                        <button class="btn btn-primary btn-block" type="button"><i class="fas fa-plus"></i> Add User</button>
-                   </div>
-                  </div>
+                        </ul>
+                    </div>
                 </div>
-                   
-               </section>
-               
-               <!-- OVERVIEW -->
-               <section id="overview" class="mt-5">
+
+            </nav>
+
+            <header id="main-header" class="bg-primary py-2 text-white">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-4">
-                            <div class="card text-center card-inverse card-danger">
-                                <div class="card-block">
-                                    <h1 class="card-title"><i class="fas fa-truck fa-lg"></i></h4>
-                                     <h1 class="card-subtitle display-4">1547</h2>
-                                        <p class="card-text ml-2">Orders Pending</p>   
-                                    
-                                </div> 
+                        <div class="col-md-6">
+                            <h1><i class="fas fa-binoculars"></i> Overview</h1>
+
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- ACTIONS  -->
+            <div class="bg-faded-1">
+                <section id="actions" class="pt-5">
+                    <div class="container">
+                        <div class="row">
+
+
+                            <div class="col-md-4">
+                                <button class="btn btn-success btn-block" data-toggle="modal" data-target="#addProductModal"
+                                    type="button"><i class="fas fa-plus"></i> Add Product</button>
+                            </div>
+
+                            <div class="col-md-4">
+                                <button class="btn btn-warning btn-block" data-toggle="modal" data-target="#addCategoryModal"
+                                    type="button"><i class="fas fa-plus"></i> Add Category</button>
+                            </div>
+
+                            <div class="col-md-4">
+                                <button class="btn btn-primary btn-block" data-toggle="modal" data-target="#addUserModal"
+                                    type="button"><i class="fas fa-plus"></i> Add User</button>
                             </div>
                         </div>
-                        <div class="col-md-4">
-                                <div class="card text-center card-inverse card-info">
+                    </div>
+
+                </section>
+
+                <!-- OVERVIEW -->
+                <section id="overview" class="mt-5">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card text-center card-inverse card-danger">
                                     <div class="card-block">
-                                        <h1 class="card-title"><i class="fas fa-handshake fa-lg"></i></h4>
-                                         <h1 class="card-subtitle display-4">15400</h2>
-                                            <p class="card-text ml-2">Items Sold</p>   
-                                        
-                                    </div> 
+                                        <h1 class="card-title"><i class="fas fa-truck fa-lg"></i></h4>
+                                            <h1 class="card-subtitle display-4">1547</h2>
+                                                <p class="card-text ml-2">Orders Pending</p>
+
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                    <div class="card text-center card-inverse card-dark">
-                                        <div class="card-block">
-                                            <h1 class="card-title"><i class="fas fa-calendar-alt fa-lg"></i></h4>
-                                             <h1 class="card-subtitle display-4">7430</h2>
-                                                <p class="card-text ml-2">This Week</p>   
-                                            
-                                        </div> 
+                                <div class="card text-center card-inverse card-info">
+                                    <div class="card-block">
+                                        <h1 class="card-title"><i class="fas fa-handshake fa-lg"></i></h4>
+                                            <h1 class="card-subtitle display-4">15400</h2>
+                                                <p class="card-text ml-2">Items Sold</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card text-center card-inverse card-dark">
+                                    <div class="card-block">
+                                        <h1 class="card-title"><i class="fas fa-calendar-alt fa-lg"></i></h4>
+                                            <h1 class="card-subtitle display-4">7430</h2>
+                                                <p class="card-text ml-2">This Week</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-5">
+                            <div class="col-md-4">
+                                <div class="card text-center card-inverse card-primary">
+                                    <div class="card-block">
+                                        <h1 class="card-title"><i class="fas fa-signal fa-lg"></i></h4>
+                                            <h1 class="card-subtitle display-4">1750</h2>
+                                                <p class="card-text ml-2">All Products</p>
+
                                     </div>
                                 </div>
                             </div>
 
-                                <div class="row mt-5">
-                                    <div class="col-md-4">
-                                        <div class="card text-center card-inverse card-primary">
-                                            <div class="card-block">
-                                                <h1 class="card-title"><i class="fas fa-signal fa-lg"></i></h4>
-                                                 <h1 class="card-subtitle display-4">1750</h2>
-                                                    <p class="card-text ml-2">All Products</p>   
-                                                
-                                            </div> 
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="col-md-4">
-                                        <div class="card text-center card-inverse card-success">
-                                            <div class="card-block">
-                                                <h1 class="card-title"><i class="fas fa-heartbeat fa-lg"></i></i></h4>
-                                                 <h1 class="card-subtitle display-4">1500</h2>
-                                                    <p class="card-text ml-2">Live Products</p>   
-                                                
-                                            </div> 
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="col-md-4">
-                                        <div class="card card-inverse text-center card-warning">
-                                            <div class="card-block">
-                                                <h1 class="card-title"><i class="fas fa-question-circle fa-lg"></i></h4>
-                                                 <h1 class="card-subtitle display-4">250</h2>
-                                                    <p class="card-text ml-2">Out Of Stock</p>   
-                                                
-                                            </div> 
-                                        </div>
+                            <div class="col-md-4">
+                                <div class="card text-center card-inverse card-success">
+                                    <div class="card-block">
+                                        <h1 class="card-title"><i class="fas fa-heartbeat fa-lg"></i></i></h4>
+                                            <h1 class="card-subtitle display-4">1500</h2>
+                                                <p class="card-text ml-2">Live Products</p>
+
                                     </div>
                                 </div>
-                    
-                </div>
-               
-               
-               
-               </section>
-               
-               <!-- STATISTICS -->
-               
-               <section id="statistics" class="mt-4">
-                   <div class="container">
-                       <div class="row">
-                           <div class="col-md-6 bg-white">
-                               <div class="card">
-                                   <div class="card-block">
-                                       <h3 class="card-title">
-                                           Recent Reports
-                                       </h2>
-                                   </div>
-                               </div>
-                             </div>
-                             
-                             <div class="col-md-6 bg-white">
-                                    <div class="card">
-                                        <div class="card-block">
-                                            <h3 class="card-title">
-                                                Char By %
-                                            </h2>
-                                        </div>
-                                    </div>
-               
-                           </div>
-                   </div>
-               </section>
-           </div>
+                            </div>
 
-          </div>
+                            <div class="col-md-4">
+                                <div class="card card-inverse text-center card-warning">
+                                    <div class="card-block">
+                                        <h1 class="card-title"><i class="fas fa-question-circle fa-lg"></i></h4>
+                                            <h1 class="card-subtitle display-4">250</h2>
+                                                <p class="card-text ml-2">Out Of Stock</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                </section>
+
+                <!-- ORDERS -->
+    <section id="orders" class="mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 offset-md-1">
+                    <div class="card">
+                        <div class="card-header text-center">
+                            <h4>Latest Orders</h4>
+                        </div>
+                        <table class="table table-striped">
+                            <thead class="thead-inverse">
+                                <tr>
+                                    <th>#</th>
+                                    <th>Order Id</th>
+                                    <th>Customer Name</th>
+                                    <th>Mobile</th>
+                                    <th>Date</th>
+                                    <th>Address</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                                    <tr>
+                                        <td scope="row">1</td>
+                                        <td>11544</td>
+                                        <td>Saheer</td>
+                                        <td>9895301704</td>
+                                        <td>27-09-2018</td>
+                                        <td>Ayyappankavu,Parappanangadi</td>
+                                        <td><a href="details.html" class="btn btn-secondary"><i class="fas fa-angle-double-right"></i> details</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">2</td>
+                                        <td>11577</td>
+                                        <td>Muneer</td>
+                                        <td>8129736263</td>
+                                        <td>27-09-2018</td>
+                                        <td>Ayyappankavu,Parappanangadi</td>
+                                        <td><a href="details.html" class="btn btn-secondary"><i class="fas fa-angle-double-right"></i> details</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">3</td>
+                                        <td>27156</td>
+                                        <td>Sabik</td>
+                                        <td>9567380398</td>
+                                        <td>26-09-2018</td>
+                                        <td>Ayyappankavu,Parappanangadi</td>
+                                        <td><a href="details.html" class="btn btn-secondary"><i class="fas fa-angle-double-right"></i> details</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">4</td>
+                                        <td>32547</td>
+                                        <td>Anees</td>
+                                        <td>9037379941</td>
+                                        <td>25-09-2018</td>
+                                        <td>Ayyappankavu,Parappanangadi</td>
+                                        <td><a href="details.html" class="btn btn-secondary"><i class="fas fa-angle-double-right"></i> details</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">5</td>
+                                        <td>16338</td>
+                                        <td>Shibin</td>
+                                        <td>8157051752</td>
+                                        <td>25-09-2018</td>
+                                        <td>Ayyappankavu,Parappanangadi</td>
+                                        <td><a href="details.html" class="btn btn-secondary"><i class="fas fa-angle-double-right"></i> details</a></td>
+                                    </tr>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
-    
-      
+    </section>            
+                
+
+    <!-- ADD PRODUCT MODAL -->
+    <div class="modal fade" id="addProductModal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title" id="addProductModalLabel">Add Product</h5>
+                    <button class="close" data-dismiss="modal"><span>&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="productName" class="form-control-label">Product Name</label>
+                            <input type="text" class="form-control" name="productName">
+                        </div>
+                        <div class="form-group">
+                            <label type="text" for="category" class="form-control-label">Category</label>
+                            <select class="form-control" name="category" id="">
+                                <option value="">Layer Cakes</option>
+                                <option value="">Pound Cakes</option>
+                                <option value="">Sponge Cakes</option>
+                                <option value="">Chocolate Cakes</option>
+
+                            </select>
+                        </div>
+
+                        <div class="form-group"><label for="productPrice" class="form-control-label">Product Price</label>
+                            <div class="input-group">
+                                <span class="input-group-addon">RS</span>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group"><label for="productOfferPrice" class="form-control-label">Product Offer
+                                Price</label>
+                            <div class="input-group">
+                                <span class="input-group-addon">RS</span>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group bg-faded p-3">
+                            <label for="file">Product Image 1</label>
+                            <input type="file" class="form-control-file" id="file">
+                            <small id="fileHelp" class="form-text text-muted">Max Size 3MB</small>
+                        </div>
+                        <div class="form-group bg-faded p-3">
+                            <label for="file">Product Image 2</label>
+                            <input type="file" class="form-control-file" id="file">
+                            <small id="fileHelp" class="form-text text-muted">Max Size 3MB</small>
+                        </div>
+                        <div class="form-group bg-faded p-3">
+                            <label for="file">Product Image 3</label>
+                            <input type="file" class="form-control-file" id="file">
+                            <small id="fileHelp" class="form-text text-muted">Max Size 3MB</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="productDescription">Product Description</label>
+                            <textarea name="editor1" id="" class="form-control"></textarea>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button class="btn btn-success" data-dismiss="modal">Add Product</button>
+                        </div>
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ADD CATEGORY MODAL LABEL -->
+    <div class="modal fade" id="addCategoryModal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-warning text-white">
+                    <h5 class="addCategoryModalLabel">Add Category</h5>
+                    <button class="close" data-dismiss="modal"><span>&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="categoryName" class="form-control-label">Category Name</label>
+                            <input type="text" class="form-control" id="categoryName">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button class="btn btn-warning" data-dismiss="modal">Add Category</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ADD USER MODAL -->
+    <div class="modal fade" id="addUserModal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="addUserModalLabel">Add User</h5>
+                    <button class="close" data-dismiss="modal"><span>&times;</span></button>
+                </div>
+
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="userName" class="form-control-label">Name</label>
+                            <input class="form-control" type="text">
+                        </div>
+                        <div class="form-group">
+                            <label for="userEmail" class="form-control-label">Email</label>
+                            <input class="form-control" type="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="form-control-label">Password</label>
+                            <input class="form-control" type="password">
+                        </div>
+                        <div class="form-group">
+                            <label for="password2" class="form-control-label">Confirm Password</label>
+                            <input class="form-control" type="password">
+                        </div>
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button class="btn btn-primary" data-dismiss="modal">Add User</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="js/jquery.min.js"></script>
     <script src="js/tether.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdn.ckeditor.com/4.10.1/standard/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace('editor1');
+    </script>
 </body>
+
 </html>
