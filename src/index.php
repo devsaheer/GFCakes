@@ -1,64 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/fontawesome.min.css"> -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
-        crossorigin="anonymous">
+include "includes/header.php";
 
-
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Bootstrap 4 Starter</title>
-    <style type="text/css">
-
-    </style>
-</head>
-
-<body>
-
+?>
     <div class="row no-gutters">
         <div class="col-md-2 bg-inverse">
             <div class="text-center my-5">
                 <img class="img-fluid" src="img/green.png" height="100" width="100" alt="Green Mart Logo">
             </div>
             <ul class="nav mt-4 flex-column nav-pills">
-                <li class="nav-item"><a href="index.html" class="nav-link active p-3"><i class="fas fa-tachometer-alt mr-3"></i>Dashboard</a></li>
+                <li class="nav-item"><a href="index.php" class="nav-link active p-3"><i class="fas fa-tachometer-alt mr-3"></i>Dashboard</a></li>
 
-                <li class="nav-item"><a href="orders.html" class="nav-link p-3"><i class="fas fa-sync mr-3"></i>Orders</a></li>
+                <li class="nav-item"><a href="orders.php" class="nav-link p-3"><i class="fas fa-sync mr-3"></i>Orders</a></li>
 
-                <li class="nav-item"><a href="products.html" class="nav-link p-3"><i class="fas fa-birthday-cake mr-3"></i>Products</a></li>
+                <li class="nav-item"><a href="products.php" class="nav-link p-3"><i class="fas fa-birthday-cake mr-3"></i>Products</a></li>
 
-                <li class="nav-item"><a href="categories.html" class="nav-link p-3"><i class="fas fa-folder-open mr-3"></i>Categories</a></li>
+                <li class="nav-item"><a href="categories.php" class="nav-link p-3"><i class="fas fa-folder-open mr-3"></i>Categories</a></li>
 
-                <li class="nav-item"><a href="users.html" class="nav-link p-3"><i class="fas fa-users mr-3"></i>Users</a></li>
+                <li class="nav-item"><a href="users.php" class="nav-link p-3"><i class="fas fa-users mr-3"></i>Users</a></li>
             </ul>
 
         </div>
         <div class="col-md-10">
-            <nav class="navbar navbar-light bg-faded navbar-toggleable-md mb-2">
-                <div class="container">
-                    <div class="navbar-toggler navbar-toggler-right" data-toggle="collapse" data-target="#navbarNav"><span
-                            class="navbar-toggler-icon"></span></div>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <form class="form-inline mr-auto">
-                            <input type="text" class="form-control" placeholder="Search...">
-                            <button class="btn btn-outline-success" type="button">Search</button>
-                        </form>
-                        <ul class="navbar-nav">
-                            <li class="nav-item mr-4"><a href="" class="nav-link"><i class="fas fa-lg fas-lg fa-bell"></i></a></li>
-                            <li class="nav-item mr-4"><a href="" class="nav-link"><i class="fas fa-lg fa-sign-out-alt"></i></a></li>
+            <?php
+            include "includes/navigation.php";
 
 
-                        </ul>
-                    </div>
-                </div>
-
-            </nav>
+            ?>
 
             <header id="main-header" class="bg-primary py-2 text-white">
                 <div class="container">
@@ -255,104 +223,77 @@
             </div>
         </div>
     </section>            
+
+
                 
 
     <!-- ADD PRODUCT MODAL -->
-    <div class="modal fade" id="addProductModal">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header bg-success text-white">
-                    <h5 class="modal-title" id="addProductModalLabel">Add Product</h5>
-                    <button class="close" data-dismiss="modal"><span>&times;</span></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-group">
-                            <label for="productName" class="form-control-label">Product Name</label>
-                            <input type="text" class="form-control" name="productName">
-                        </div>
-                        <div class="form-group">
-                            <label type="text" for="category" class="form-control-label">Category</label>
-                            <select class="form-control" name="category" id="">
-                                <option value="">Layer Cakes</option>
-                                <option value="">Pound Cakes</option>
-                                <option value="">Sponge Cakes</option>
-                                <option value="">Chocolate Cakes</option>
 
-                            </select>
-                        </div>
+    <?php include "add_product_modal.php"; ?>
 
-                        <div class="form-group"><label for="productPrice" class="form-control-label">Product Price</label>
-                            <div class="input-group">
-                                <span class="input-group-addon">RS</span>
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-                        <div class="form-group"><label for="productOfferPrice" class="form-control-label">Product Offer
-                                Price</label>
-                            <div class="input-group">
-                                <span class="input-group-addon">RS</span>
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
+    <?php
 
-                        <div class="form-group bg-faded p-3">
-                            <label for="file">Product Image 1</label>
-                            <input type="file" class="form-control-file" id="file">
-                            <small id="fileHelp" class="form-text text-muted">Max Size 3MB</small>
-                        </div>
-                        <div class="form-group bg-faded p-3">
-                            <label for="file">Product Image 2</label>
-                            <input type="file" class="form-control-file" id="file">
-                            <small id="fileHelp" class="form-text text-muted">Max Size 3MB</small>
-                        </div>
-                        <div class="form-group bg-faded p-3">
-                            <label for="file">Product Image 3</label>
-                            <input type="file" class="form-control-file" id="file">
-                            <small id="fileHelp" class="form-text text-muted">Max Size 3MB</small>
-                        </div>
+    if(isset($_POST['add_product'])){
+        $product_name = $_POST['product_name'];
+        $product_category = $_POST['product_category'];
+        $product_price = $_POST['product_price'];
+        $product_offer_price = $_POST['product_offer_price'];
+        $product_image1 = $_FILES['product_image1']['name'];
+        $product_image1_tmp = $_FILES['product_image1']['tmp_name'];
+        $product_image2 = $_FILES['product_image2']['name'];
+        $product_image2_tmp = $_FILES['product_image2']['tmp_name'];
+        $product_image3 = $_FILES['product_image3']['name'];
+        $product_image3_tmp = $_FILES['product_image3']['tmp_name'];
+        $product_description = $_POST['product_description'];
+        $product_status = $_POST['product_status'];
 
-                        <div class="form-group">
-                            <label for="productDescription">Product Description</label>
-                            <textarea name="editor1" id="" class="form-control"></textarea>
-                        </div>
+        move_uploaded_file($product_image1_tmp,"img/$product_image1");
+        move_uploaded_file($product_image2_tmp,"img/$product_image2");
+        move_uploaded_file($product_image3_tmp,"img/$product_image3");
 
-                        <div class="modal-footer">
-                            <button class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button class="btn btn-success" data-dismiss="modal">Add Product</button>
-                        </div>
+        $query = "INSERT INTO products(product_name,product_category,product_price,product_offer_price,product_image1,product_image2,product_image3,product_description,product_status)";
+        $query.= "VALUES('{$product_name}','{$product_category}',{$product_price},{$product_offer_price},'{$product_image1}','{$product_image2}','{$product_image3}','{$product_description}','{$product_status}')";
+
+        $add_product_query = mysqli_query($connection,$query);
+
+        if(!$add_product_query){
+            die("Query Failed ".mysqli_error($connection));
+        }
+        
+    }
 
 
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+
+
+    ?>
 
     <!-- ADD CATEGORY MODAL LABEL -->
-    <div class="modal fade" id="addCategoryModal">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header bg-warning text-white">
-                    <h5 class="addCategoryModalLabel">Add Category</h5>
-                    <button class="close" data-dismiss="modal"><span>&times;</span></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-group">
-                            <label for="categoryName" class="form-control-label">Category Name</label>
-                            <input type="text" class="form-control" id="categoryName">
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button class="btn btn-warning" data-dismiss="modal">Add Category</button>
+    
+    <?php include "add_category_modal.php"; ?>
 
-                </div>
-            </div>
-        </div>
-    </div>
+    <?php
+    
+    if(isset($_POST['add_category'])){
+
+        $cat_name = $_POST['cat_name'];
+        $cat_image = $_FILES['cat_image']['name'];
+        $cat_image_tmp = $_FILES['cat_image']['tmp_name'];
+        move_uploaded_file($cat_image_tmp,"img/$cat_image");
+        $query = "INSERT INTO categories(cat_name, cat_image) VALUES ('{$cat_name}', '{$cat_image}')";
+        $add_category_query = mysqli_query($connection,$query);
+        if(!$add_category_query){
+
+            die("query failed".mysqli_connect_errno());
+        }
+        
+
+
+    };
+
+
+
+
+   ?>
 
     <!-- ADD USER MODAL -->
     <div class="modal fade" id="addUserModal">
@@ -398,7 +339,37 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="https://cdn.ckeditor.com/4.10.1/standard/ckeditor.js"></script>
     <script>
-        CKEDITOR.replace('editor1');
+        CKEDITOR.replace('product_description');
+    </script>
+    <script>
+    function readURL(input,image) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#'+image).attr('src', e.target.result);
+        }
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+$("#image-input1").change(function(){
+    readURL(this,"product-image1-thumbnail");
+});
+$("#image-input2").change(function(){
+    readURL(this,"product-image2-thumbnail");
+});
+$("#image-input3").change(function(){
+    readURL(this,"product-image3-thumbnail");
+});
+
+
+
+$("#image-input").change(function(){
+    readURL(this,"cat-image-thumbnail");
+});
+
     </script>
 </body>
 

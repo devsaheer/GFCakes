@@ -1,4 +1,7 @@
 {
+    "phpserver.relativePath": "",
+    "phpserver.port": 8080,
+    "phpserver.phpPath": "",
     "guides.active.width": 5,
     "guides.normal.width": 3
 }

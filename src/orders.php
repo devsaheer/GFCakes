@@ -1,25 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/fontawesome.min.css"> -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
-        crossorigin="anonymous">
+include "includes/header.php";
 
-
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Bootstrap 4 Starter</title>
-    <style type="text/css">
-
-    </style>
-</head>
-
-<body>
+?>
 
     <div class="row no-gutters">
         <div class="col-md-2 bg-inverse">
@@ -27,38 +10,22 @@
                 <img class="img-fluid" src="img/green.png" height="100" width="100" alt="Green Mart Logo">
             </div>
             <ul class="nav mt-4 flex-column nav-pills">
-                <li class="nav-item"><a href="index.html" class="nav-link p-3"><i class="fas fa-tachometer-alt mr-3"></i>Dashboard</a></li>
+                <li class="nav-item"><a href="index.php" class="nav-link p-3"><i class="fas fa-tachometer-alt mr-3"></i>Dashboard</a></li>
 
-                <li class="nav-item"><a href="orders.html" class="nav-link active p-3"><i class="fas fa-sync mr-3"></i>Orders</a></li>
+                <li class="nav-item"><a href="orders.php" class="nav-link active p-3"><i class="fas fa-sync mr-3"></i>Orders</a></li>
 
-                <li class="nav-item"><a href="products.html" class="nav-link p-3"><i class="fas fa-birthday-cake mr-3"></i>Products</a></li>
+                <li class="nav-item"><a href="products.php" class="nav-link p-3"><i class="fas fa-birthday-cake mr-3"></i>Products</a></li>
 
-                <li class="nav-item"><a href="categories.html" class="nav-link p-3"><i class="fas fa-folder-open mr-3"></i>Categories</a></li>
+                <li class="nav-item"><a href="categories.php" class="nav-link p-3"><i class="fas fa-folder-open mr-3"></i>Categories</a></li>
 
-                <li class="nav-item"><a href="users.html" class="nav-link p-3"><i class="fas fa-users mr-3"></i>Users</a></li>
+                <li class="nav-item"><a href="users.php" class="nav-link p-3"><i class="fas fa-users mr-3"></i>Users</a></li>
             </ul>
 
         </div>
         <div class="col-md-10">
-            <nav class="navbar navbar-light bg-faded navbar-toggleable-md mb-2">
-                <div class="container">
-                    <div class="navbar-toggler navbar-toggler-right" data-toggle="collapse" data-target="#navbarNav"><span
-                            class="navbar-toggler-icon"></span></div>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <form class="form-inline mr-auto">
-                            <input type="text" class="form-control" placeholder="Search...">
-                            <button class="btn btn-outline-success" type="button">Search</button>
-                        </form>
-                        <ul class="navbar-nav">
-                            <li class="nav-item mr-4"><a href="" class="nav-link"><i class="fas fa-lg fas-lg fa-bell"></i></a></li>
-                            <li class="nav-item mr-4"><a href="" class="nav-link"><i class="fas fa-lg fa-sign-out-alt"></i></a></li>
-
-
-                        </ul>
-                    </div>
-                </div>
-
-            </nav>
+        <?php
+        include "includes/navigation.php";
+        ?>
 
             <header id="main-header" class="bg-danger py-2 text-white">
                 <div class="container">
