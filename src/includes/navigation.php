@@ -9,7 +9,7 @@
                         </form>
                         <ul class="navbar-nav">
                             <li class="nav-item mr-4"><a href="" class="nav-link"><i class="fas fa-lg fas-lg fa-bell"></i></a></li>
-                            <li class="nav-item mr-4"><a href="" class="nav-link"><i class="fas fa-lg fa-sign-out-alt"></i></a></li>
+                            <li class="nav-item mr-4"><a href="includes/logout.php" class="nav-link"><i class="fas fa-lg fa-sign-out-alt"></i></a></li>
 
 
                         </ul>

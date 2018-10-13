@@ -4,7 +4,7 @@ include "includes/header.php";
 
 ?>
 
-    <div class="row no-gutters">
+    <div class="row no-gutters" style="min-height:100vh">
         <div class="col-md-2 bg-inverse">
             <div class="text-center my-5">
                 <img class="img-fluid" src="img/green.png" height="100" width="100" alt="Green Mart Logo">

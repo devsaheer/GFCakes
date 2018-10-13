@@ -3,7 +3,7 @@
 include "includes/header.php";
 
 ?>
-    <div class="row no-gutters">
+    <div class="row no-gutters" style="min-height:100vh">
         <div class="col-md-2 bg-inverse">
             <div class="text-center my-5">
                 <img class="img-fluid" src="img/green.png" height="100" width="100" alt="Green Mart Logo">
@@ -103,52 +103,16 @@ include "includes/header.php";
 
                             </tbody>        
                         </table>
-                        <?php
-                          if(isset($_GET['delete'])){
-                            $the_cat_id = $_GET['delete'];
-                          $query = "DELETE FROM categories WHERE cat_id = {$the_cat_id} ";
-                          $delete_query = mysqli_query($connection,$query);
-                          if(!$delete_query){
-                              die("Query Failed ".mysqli_error($connection));
-                          }
-                          
-                          header("Location: categories.php");
-                          
-                          }
-
-                          if(isset($_POST['add_category'])){
-                            $the_cat_id = $_POST['cat_id'];
-                            $the_cat_name = $_POST['cat_name'];
-                            $the_cat_image = $_FILES['cat_image']['name'];
-                            $the_cat_image_tmp = $_FILES['cat_image']['tmp_name'];
-                            move_uploaded_file($the_cat_image_tmp,"img/$the_cat_image");
-                            if(empty($the_cat_image)){
-                            $query = "SELECT * FROM categories WHERE cat_id = {$the_cat_id}";
-                            $select_image_query = mysqli_query($connection,$query);
-                            while($row = mysqli_fetch_assoc($select_image_query)){
-                                $the_cat_image = $row['cat_image'];
-                            }
-                            }
-                          $query = "UPDATE categories SET cat_name = '{$the_cat_name}',cat_image = '{$the_cat_image}' WHERE cat_id = {$the_cat_id}";
-                          $update_categories_query = mysqli_query($connection,$query);
-                          if(!$update_categories_query){
-                              die("query failed ".mysqli_error($connection));
-                          }
-                          
-                          header("Location: categories.php");
-
-                        }
-                          
-
-                        ?>
-
                     </div>
                 </div>
             </div>
         </div>
-    </section>            
+    </section>  
+    
+  <?php deleteCategory(); ?>
+  <?php updateCategory(); ?>    
                 
-  <?php include "add_category_modal.php";?> 
+  <?php include "includes/add_category_modal.php";?> 
 
     <script src="js/jquery.min.js"></script>
     <script src="js/tether.min.js"></script>

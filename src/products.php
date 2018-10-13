@@ -4,7 +4,7 @@ include "includes/header.php";
 
 ?>
 
-    <div class="row no-gutters">
+    <div class="row no-gutters" style="min-height:100vh">
         <div class="col-md-2 bg-inverse">
             <div class="text-center my-5">
                 <img class="img-fluid" src="img/green.png" height="100" width="100" alt="Green Mart Logo">
@@ -133,83 +133,10 @@ while($row = mysqli_fetch_assoc($select_all_products_query)){
         </div>
     </section>            
                 
-    <?php
-                          if(isset($_GET['delete'])){
-                            $the_product_id = $_GET['delete'];
-                          $query = "DELETE FROM products WHERE product_id = {$the_product_id} ";
-                          $delete_query = mysqli_query($connection,$query);
-                          if(!$delete_query){
-                              die("Query Failed ".mysqli_error($connection));
-                          }
-                          
-                          header("Location: products.php");
-                          
-                          }
+    <?php deleteProduct(); ?>
+    <?php updateProduct(); ?>
 
-                          if(isset($_POST['add_product'])){
-                            $the_product_id = $_POST['product_id'];
-                            $the_product_name = $_POST['product_name'];
-                            $the_product_category = $_POST['product_category'];
-                            $the_product_price = $_POST['product_price'];
-                            $the_product_offer_price = $_POST['product_offer_price'];
-                            $the_product_image1 = $_FILES['product_image1']['name'];
-                            $the_product_image1_tmp = $_FILES['product_image1']['tmp_name'];
-                            $the_product_image2 = $_FILES['product_image2']['name'];
-                            $the_product_image2_tmp = $_FILES['product_image2']['tmp_name'];
-                            $the_product_image3 = $_FILES['product_image3']['name'];
-                            $the_product_image3_tmp = $_FILES['product_image3']['tmp_name'];
-                            $the_product_description = $_POST['product_description'];
-                            $the_product_status = $_POST['product_status'];
-
-                            move_uploaded_file($the_product_image1_tmp,"img/$the_product_image1");
-                            move_uploaded_file($the_product_image2_tmp,"img/$the_product_image2");
-                            move_uploaded_file($the_product_image3_tmp,"img/$the_product_image3");
-
-                          $query = "SELECT * FROM products WHERE product_id = {$the_product_id} ";
-                          $select_image_query = mysqli_query($connection,$query);
-                          while($row = mysqli_fetch_assoc($select_image_query)){
-                            $image1 = $row['product_image1'];
-                            $image2 = $row['product_image2'];
-                            $image3 = $row['product_image3'];
-                          }
-
-                          if(empty($the_product_image1)){
-                              
-                                $the_product_image1 = $image1;
-                              
-                          }
-
-                          
-                          if(empty($the_product_image2)){
-                            
-                              $the_product_image2 = $image2;
-                            
-
-                        }
- 
-                        
-                        if(empty($the_product_image3)){ 
-                            
-                              $the_product_image3 = $image3;
-                            
-
-                        }
-
-
-                          $query = "UPDATE products SET product_name = '{$the_product_name}',product_category = '{$the_product_category}',product_price = '{$the_product_price}',product_offer_price = '{$the_product_offer_price}',product_image1 = '{$the_product_image1}',product_image2 = '{$the_product_image2}',product_image3 = '{$the_product_image3}',product_description = '{$the_product_description}',product_status = '{$the_product_status}' WHERE product_id = {$the_product_id}";
-                          $update_products_query = mysqli_query($connection,$query);
-                          if(!$update_products_query){
-                              die("query failed ".mysqli_error($connection));
-                          }
-                          
-                          header("Location: products.php");
-
-                        }
-                          
-
-                        ?>
-
-                        <?php include "add_product_modal.php";?> 
+                        <?php include "includes/add_product_modal.php";?> 
 
     <script src="js/jquery.min.js"></script>
     <script src="js/tether.min.js"></script>

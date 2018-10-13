@@ -2,8 +2,9 @@
 
 include "includes/header.php";
 
+
 ?>
-    <div class="row no-gutters">
+    <div class="row no-gutters" style="min-height:100vh">
         <div class="col-md-2 bg-inverse">
             <div class="text-center my-5">
                 <img class="img-fluid" src="img/green.png" height="100" width="100" alt="Green Mart Logo">
@@ -229,110 +230,22 @@ include "includes/header.php";
 
     <!-- ADD PRODUCT MODAL -->
 
-    <?php include "add_product_modal.php"; ?>
+    <?php include "includes/add_product_modal.php"; ?>
 
-    <?php
-
-    if(isset($_POST['add_product'])){
-        $product_name = $_POST['product_name'];
-        $product_category = $_POST['product_category'];
-        $product_price = $_POST['product_price'];
-        $product_offer_price = $_POST['product_offer_price'];
-        $product_image1 = $_FILES['product_image1']['name'];
-        $product_image1_tmp = $_FILES['product_image1']['tmp_name'];
-        $product_image2 = $_FILES['product_image2']['name'];
-        $product_image2_tmp = $_FILES['product_image2']['tmp_name'];
-        $product_image3 = $_FILES['product_image3']['name'];
-        $product_image3_tmp = $_FILES['product_image3']['tmp_name'];
-        $product_description = $_POST['product_description'];
-        $product_status = $_POST['product_status'];
-
-        move_uploaded_file($product_image1_tmp,"img/$product_image1");
-        move_uploaded_file($product_image2_tmp,"img/$product_image2");
-        move_uploaded_file($product_image3_tmp,"img/$product_image3");
-
-        $query = "INSERT INTO products(product_name,product_category,product_price,product_offer_price,product_image1,product_image2,product_image3,product_description,product_status)";
-        $query.= "VALUES('{$product_name}','{$product_category}',{$product_price},{$product_offer_price},'{$product_image1}','{$product_image2}','{$product_image3}','{$product_description}','{$product_status}')";
-
-        $add_product_query = mysqli_query($connection,$query);
-
-        if(!$add_product_query){
-            die("Query Failed ".mysqli_error($connection));
-        }
-        
-    }
-
-
-
-
-    ?>
+    <?php addProduct(); ?>
 
     <!-- ADD CATEGORY MODAL LABEL -->
     
-    <?php include "add_category_modal.php"; ?>
+    <?php include "includes/add_category_modal.php"; ?>
 
-    <?php
-    
-    if(isset($_POST['add_category'])){
-
-        $cat_name = $_POST['cat_name'];
-        $cat_image = $_FILES['cat_image']['name'];
-        $cat_image_tmp = $_FILES['cat_image']['tmp_name'];
-        move_uploaded_file($cat_image_tmp,"img/$cat_image");
-        $query = "INSERT INTO categories(cat_name, cat_image) VALUES ('{$cat_name}', '{$cat_image}')";
-        $add_category_query = mysqli_query($connection,$query);
-        if(!$add_category_query){
-
-            die("query failed".mysqli_connect_errno());
-        }
-        
-
-
-    };
-
-
-
-
-   ?>
+    <?php addCategory(); ?>
 
     <!-- ADD USER MODAL -->
-    <div class="modal fade" id="addUserModal">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header bg-primary text-white">
-                    <h5 class="modal-title" id="addUserModalLabel">Add User</h5>
-                    <button class="close" data-dismiss="modal"><span>&times;</span></button>
-                </div>
+    <?php include "includes/add_user_modal.php"; ?>
+    
+    <?php addUser(); ?>
 
-                <div class="modal-body">
-                    <form>
-                        <div class="form-group">
-                            <label for="userName" class="form-control-label">Name</label>
-                            <input class="form-control" type="text">
-                        </div>
-                        <div class="form-group">
-                            <label for="userEmail" class="form-control-label">Email</label>
-                            <input class="form-control" type="email">
-                        </div>
-                        <div class="form-group">
-                            <label for="password" class="form-control-label">Password</label>
-                            <input class="form-control" type="password">
-                        </div>
-                        <div class="form-group">
-                            <label for="password2" class="form-control-label">Confirm Password</label>
-                            <input class="form-control" type="password">
-                        </div>
-                    </form>
-                </div>
-
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button class="btn btn-primary" data-dismiss="modal">Add User</button>
-
-                </div>
-            </div>
-        </div>
-    </div>
+    
 
     <script src="js/jquery.min.js"></script>
     <script src="js/tether.min.js"></script>
@@ -370,7 +283,24 @@ $("#image-input").change(function(){
     readURL(this,"cat-image-thumbnail");
 });
 
+function passwordCheck() {
+    var pass1 = document.getElementById("admin_password").value;
+    var pass2 = document.getElementById("retype_password").value;
+    var ok = true;
+    if (pass1 != pass2) {
+        //alert("Passwords Do not match");
+        document.getElementById("admin_password").style.borderColor = "#E34234";
+        document.getElementById("retype_password").style.borderColor = "#E34234";
+        ok = false;
+        $('#password_message').html('Not Matching').css('color', '#E34234');
+    }
+
+    return ok;
+}
+
+
     </script>
+
 </body>
 
 </html>
